@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/tugu-develop/login_project/model"
+	"login_project/model"
 
 	"gorm.io/gorm"
 )

@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/tugu-develop/login_project/controller"
-	"github.com/tugu-develop/login_project/middleware"
+	"login_project/controller"
+	"login_project/middleware"
 	"net/http"
 	"time"
 

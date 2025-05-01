@@ -1,4 +1,4 @@
-module github.com/tugu-develop/login_project
+module login_project
 
 go 1.24.2
 

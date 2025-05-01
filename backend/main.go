@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/tugu-develop/login_project/controller"
-	"github.com/tugu-develop/login_project/infrastructure"
-	"github.com/tugu-develop/login_project/repository"
-	"github.com/tugu-develop/login_project/router"
-	"github.com/tugu-develop/login_project/usecase"
+	"login_project/controller"
+	"login_project/infrastructure"
+	"login_project/repository"
+	"login_project/router"
+	"login_project/usecase"
 	"log"
 	"context"
 

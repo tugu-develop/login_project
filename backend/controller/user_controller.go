@@ -2,8 +2,8 @@ package controller
 
 import (
 	"fmt"
-	"github.com/tugu-develop/login_project/model"
-	"github.com/tugu-develop/login_project/usecase"
+	"login_project/model"
+	"login_project/usecase"
 	"net/http"
 
 	"time"

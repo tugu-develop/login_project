@@ -3,8 +3,8 @@ package usecase
 import (
 	"context"
 	"fmt"
-	"github.com/tugu-develop/login_project/model"
-	"github.com/tugu-develop/login_project/repository"
+	"login_project/model"
+	"login_project/repository"
 	"os"
 	"time"
 

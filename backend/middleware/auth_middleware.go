@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/tugu-develop/login_project/controller"
+	"login_project/controller"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
