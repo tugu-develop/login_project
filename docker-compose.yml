@@ -1,0 +1,45 @@
+services:
+  backend:
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - 18080:8080
+    volumes:
+      - ./backend:/app 
+    depends_on:
+      - postgres
+  postgres:
+    image: "postgres:15-alpine"
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+  pgadmin4:
+    image: dpage/pgadmin4:8.4
+    ports:
+      - 5050:80
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: test@test.com
+      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    depends_on:
+      - postgres
+  redis:
+    image: "redis:latest"
+    ports:
+      - "36379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  db:
+  pgadmin-data:
+  redis-data:
